@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.practice.capgemini.CensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-19T03:16:42" hostname="swapnaneels-MacBook-Air.local" time="6.519">
+<testsuite name="com.practice.capgemini.CensusAnalyserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-10-19T04:17:16" hostname="swapnaneels-MacBook-Air.local" time="0.525">
   <properties/>
-  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="com.practice.capgemini.CensusAnalyserTest" time="6.519"/>
+  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="com.practice.capgemini.CensusAnalyserTest" time="0.492"/>
+  <testcase name="givenIndianStateCSV_ShouldReturnExactCount" classname="com.practice.capgemini.CensusAnalyserTest" time="0.01"/>
+  <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
