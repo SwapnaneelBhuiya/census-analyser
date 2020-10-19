@@ -52,10 +52,6 @@ public class CensusAnalyser {
                 Iterable<IndiaStateCodeCSV> csvIterable=()-> censusCSVIterator;
                 int namOfEateries = (int) StreamSupport.stream(csvIterable.spliterator(),false).count();
                 return namOfEateries;
-//                while (censusCSVIterator.hasNext()) {
-//                    namOfEateries++;
-//                    IndiaCensusCSV censusData = censusCSVIterator.next();
-//                }
             }
             catch(IllegalStateException e) {
                 throw new CensusAnalyserException(e.getMessage(),
@@ -72,4 +68,4 @@ public class CensusAnalyser {
                 catch(Exception e){}
             }
         }
-    }
+}
