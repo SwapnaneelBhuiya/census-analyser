@@ -18,6 +18,10 @@ public class CensusAnalyser {
                 csvToBeanBuilder.withType(IndiaCensusCSV.class);
                 csvToBeanBuilder.withIgnoreLeadingWhiteSpace(true);
                 csvToBean=csvToBeanBuilder.build();
+                Iterator<IndiaCensusCSV> censusCSVIterator = csvToBean.iterator();
+                Iterable<IndiaCensusCSV> csvIterable=()-> censusCSVIterator;
+                int namOfEateries = (int) StreamSupport.stream(csvIterable.spliterator(),false).count();
+                return namOfEateries;
 //                while (censusCSVIterator.hasNext()) {
 //                    namOfEateries++;
 //                    IndiaCensusCSV censusData = censusCSVIterator.next();
@@ -26,14 +30,9 @@ public class CensusAnalyser {
                 throw new CensusAnalyserException(e.getMessage(),
                         CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
             }
-            catch(IllegalStateException e)
-            {
+            catch(IllegalStateException e) {
                 throw new CensusAnalyserException(e.getMessage(),
                         CensusAnalyserException.ExceptionType.UNABLE_TO_PARSE);
             }
-            Iterator<IndiaCensusCSV> censusCSVIterator = csvToBean.iterator();
-            Iterable<IndiaCensusCSV> csvIterable=()-> censusCSVIterator;
-            int namOfEateries = (int) StreamSupport.stream(csvIterable.spliterator(),false).count();
-            return namOfEateries;
         }
     }
