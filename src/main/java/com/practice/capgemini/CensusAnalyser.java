@@ -20,8 +20,7 @@ public class CensusAnalyser {
 //                csvToBean = csvToBeanBuilder.build();
                 Iterator<IndiaCensusCSV> censusCSVIterator = this.getCSVFileIterator(reader,  IndiaCensusCSV.class);
                 Iterable<IndiaCensusCSV> csvIterable = () -> censusCSVIterator;
-                int namOfEateries = (int) StreamSupport.stream(csvIterable.spliterator(), false).count();
-                return namOfEateries;
+                return getCount(censusCSVIterator);
 //                while (censusCSVIterator.hasNext()) {
 //                    namOfEateries++;
 //                    IndiaCensusCSV censusData = censusCSVIterator.next();
@@ -50,8 +49,7 @@ public class CensusAnalyser {
 //                csvToBean=csvToBeanBuilder.build();
                 Iterator<IndiaStateCodeCSV> censusCSVIterator = this.getStateCSVFileIterator(reader,IndiaStateCodeCSV.class);
                 Iterable<IndiaStateCodeCSV> csvIterable=()-> censusCSVIterator;
-                int namOfEateries = (int) StreamSupport.stream(csvIterable.spliterator(),false).count();
-                return namOfEateries;
+                return getCount(censusCSVIterator);
             }
             catch(IllegalStateException e) {
                 throw new CensusAnalyserException(e.getMessage(),
