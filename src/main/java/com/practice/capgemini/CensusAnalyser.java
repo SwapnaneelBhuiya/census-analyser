@@ -1,4 +1,7 @@
 package com.practice.capgemini;
+import com.capgemini.censusjar.CSVBuilderFactory;
+import com.capgemini.censusjar.CensusAnalyserException;
+import com.capgemini.censusjar.ICSVBuilder;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 
@@ -13,7 +16,7 @@ public class CensusAnalyser {
         public int loadIndiaCensusData(String csvFilePath) throws CensusAnalyserException {
             CsvToBean<IndiaCensusCSV> csvToBean;
             try (Reader reader= Files.newBufferedReader(Paths.get(csvFilePath));){
-                ICSVBuilder icsvBuilder=CSVBuilderFactory.createCSVBuilder();
+                ICSVBuilder icsvBuilder= CSVBuilderFactory.createCSVBuilder();
                 Iterator<IndiaCensusCSV> censusCSVIterator = icsvBuilder.getCSVFileIterator(reader,  IndiaCensusCSV.class);
                 return getCount(censusCSVIterator);
             }
