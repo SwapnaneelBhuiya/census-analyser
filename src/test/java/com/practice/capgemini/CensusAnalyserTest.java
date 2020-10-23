@@ -143,7 +143,7 @@ public class CensusAnalyserTest {
         CensusAnalyser censusAnalyser=new CensusAnalyser();
         String sortedCensusData= censusAnalyser.getStateCodeWiseSortedCensusData(INDIA_STATE_CODE_FILE_PATH);
         IndiaStateCodeCSV[] censusCSV=new Gson().fromJson(sortedCensusData, IndiaStateCodeCSV[].class);
-        Assert.assertEquals("Andhra Pradesh New", censusCSV[0].state);
+        Assert.assertEquals("West Bengal", censusCSV[0].state);
     }
     @Test
     public void givenIndianCensusData_WhenSortedOnStateWrong_ShouldReturnWrongSortedResult() {

@@ -27,7 +27,7 @@ public class CensusAnalyser {
                 while (censusCSVIterator.hasNext()) {
                     this.csvFileList.add((censusCSVIterator.next()));
                 }
-                return getCount(censusCSVIterator);
+                return csvFileList.size();
             }
             catch(IllegalStateException e) {
                 throw new CensusAnalyserException(e.getMessage(),
