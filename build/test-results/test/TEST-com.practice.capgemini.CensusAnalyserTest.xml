@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.practice.capgemini.CensusAnalyserTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2020-10-19T07:50:37" hostname="swapnaneels-MacBook-Air.local" time="0.657">
+<testsuite name="com.practice.capgemini.CensusAnalyserTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2020-10-20T08:06:36" hostname="swapnaneels-MacBook-Air.local" time="1.081">
   <properties/>
-  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="com.practice.capgemini.CensusAnalyserTest" time="0.355"/>
-  <testcase name="givenIndianStateCSV_ShouldReturnExactCount" classname="com.practice.capgemini.CensusAnalyserTest" time="0.173"/>
-  <testcase name="givenTheStateCensusCSVFileWhenCorrectButCSVHeaderIncorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.027"/>
-  <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.007"/>
-  <testcase name="givenTheStateCensusCSVFileWhenCorrectButDelimiterIncorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.007"/>
-  <testcase name="givenTheStateCodeCSVFileWhenCorrectButCSVHeaderIncorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.02"/>
+  <testcase name="givenIndianCensusCSVFileReturnsCorrectRecords" classname="com.practice.capgemini.CensusAnalyserTest" time="0.604"/>
+  <testcase name="givenIndianStateCSV_ShouldReturnExactCount" classname="com.practice.capgemini.CensusAnalyserTest" time="0.274"/>
+  <testcase name="givenTheStateCensusCSVFileWhenCorrectButCSVHeaderIncorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.024"/>
+  <testcase name="givenIndiaCensusData_WithWrongFile_ShouldThrowException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.003"/>
+  <testcase name="givenTheStateCensusCSVFileWhenCorrectButDelimiterIncorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.054"/>
+  <testcase name="givenTheStateCodeCSVFileWhenCorrectButCSVHeaderIncorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.011"/>
   <testcase name="givenIndiaStateCSV_WithWrongFile_ShouldThrowException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenTheStateCodeCSVFilewhencorrectbuttypeincorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.001"/>
-  <testcase name="givenTheStateCensuCSVFilewhencorrectbuttypeincorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.002"/>
-  <testcase name="givenTheStateCodeCSVFileWhenCorrectButDelimiterIncorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.009"/>
+  <testcase name="givenTheStateCodeCSVFilewhencorrectbuttypeincorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.004"/>
+  <testcase name="givenTheStateCensuCSVFilewhencorrectbuttypeincorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.006"/>
+  <testcase name="givenTheStateCodeCSVFileWhenCorrectButDelimiterIncorrectReturnsACustomException" classname="com.practice.capgemini.CensusAnalyserTest" time="0.045"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

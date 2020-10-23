@@ -1,8 +1,11 @@
 package com.practice.capgemini;
 
+import com.google.gson.Gson;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import java.lang.reflect.Type;
 
 public class CensusAnalyserTest {
 
@@ -127,6 +130,13 @@ public class CensusAnalyserTest {
         } catch (CensusAnalyserException e) {
             Assert.assertEquals(CensusAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM,e.type);
         }
+    }
+    @Test
+    public void giveIndianCensusDta_WhenSortedOnState_ShouldReturnResult() throws CensusAnalyserException {
+        CensusAnalyser censusAnalyser=new CensusAnalyser();
+        String sortedCensusData= censusAnalyser.getStateWiseSortedCensusData(INDIA_CENSUS_CSV_FILE_PATH);
+        IndiaCensusCSV[] censusCSV=new Gson().fromJson(sortedCensusData, (Type) IndiaCensusCSV.class);
+        Assert.assertEquals("Andhra Pradesh", censusCSV[0].state);
     }
 }
 
