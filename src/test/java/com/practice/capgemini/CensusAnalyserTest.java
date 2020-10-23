@@ -170,7 +170,7 @@ public class CensusAnalyserTest {
             e.printStackTrace();
         }
     }
-//
+
 //    @Test
 //    public void givenIndianCensusData_WhenSortedOnAreaInSqKm_ShouldReturnSortedResult() {
 //
@@ -179,11 +179,24 @@ public class CensusAnalyserTest {
 //            CensusAnalyser censusAnalyser = new CensusAnalyser();
 //            sortedCensusData = censusAnalyser.getAreaInSqKmWiseSortedCensusData(INDIA_CENSUS_CSV_FILE_PATH);
 //            IndiaCensusCSV[] censusCSV = new Gson().fromJson(sortedCensusData, IndiaCensusCSV[].class);
-//            Assert.assertEquals(342239,censusCSV[censusCSV.length - 1].areaInSqKm);
+//            Assert.assertEquals(342239,censusCSV[0].areaInSqKm);
 //        } catch (CensusAnalyserException e) {
 //            e.printStackTrace();
 //        }
 //    }
+    @Test
+    public void givenIndianCensusData_WhenSortedOnPopulationDensity_ShouldReturnSortedResult() {
+
+        String sortedCensusData = null;
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            sortedCensusData = censusAnalyser.getDensityInSqKmWiseSortedCensusData(INDIA_CENSUS_CSV_FILE_PATH);
+            IndiaCensusCSV[] censusCSV = new Gson().fromJson(sortedCensusData, IndiaCensusCSV[].class);
+            Assert.assertEquals(1102,censusCSV[0].densityPerSqKm);
+        } catch (CensusAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 
